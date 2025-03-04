@@ -25,7 +25,7 @@ This Python script implements a classic Hangman game where the words to guess ar
 3.  **Run the script:** Open your terminal or command prompt, navigate to the directory where you saved `hangman_with_file.py`, and run the following command:
 
     ```bash
-    python hangman_with_file.py
+    python hangman_python.py
     ```
 
 4.  **Play the game:** Follow the prompts to guess the letters and try to figure out the hidden word.
