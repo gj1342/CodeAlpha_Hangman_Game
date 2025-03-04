@@ -1,0 +1,16 @@
+python
+developer
+hangman
+programming
+framework
+frontend
+backend
+algorithm
+function
+variable
+syntax
+debug
+compile
+execute
+codealpha
+internship
