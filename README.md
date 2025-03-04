@@ -1,10 +1,12 @@
-# Hangman Game
+# Hangman Game with External Word List
 
-This Python script implements a classic Hangman game. Players try to guess a hidden word by guessing one letter at a time. The game displays the Hangman figure as the player makes incorrect guesses.
+This Python script implements a classic Hangman game where the words to guess are loaded from an external text file (`words.txt`). This allows for easy customization of the game's vocabulary.
 
 ## Features
 
--   **Random Word Selection:** The game randomly chooses a word from a predefined list.
+-   **External Word List:** Loads words from a `words.txt` file, allowing for easy updates to the game's vocabulary.
+-   **Error Handling:** Checks if the `words.txt` file exists and handles empty word lists.
+-   **Random Word Selection:** Randomly chooses a word from the loaded list.
 -   **Hangman Stages:** Displays different stages of the Hangman figure based on the number of incorrect guesses.
 -   **Input Validation:** Checks if the player's input is a single letter.
 -   **Guess Tracking:** Keeps track of correctly and incorrectly guessed letters.
@@ -14,17 +16,19 @@ This Python script implements a classic Hangman game. Players try to guess a hid
 ## Prerequisites
 
 -   Python 3.x
+-   A text file named `words.txt` containing one word per line.
 
 ## How to Run
 
-1.  **Save the script:** Save the provided Python code as `hangman.py`.
-2.  **Run the script:** Open your terminal or command prompt, navigate to the directory where you saved `hangman.py`, and run the following command:
+1.  **Create `words.txt`:** Create a text file named `words.txt` in the same directory as the Python script. Add one word per line to this file.
+2.  **Save the script:** Save the provided Python code as `hangman_with_file.py`.
+3.  **Run the script:** Open your terminal or command prompt, navigate to the directory where you saved `hangman_with_file.py`, and run the following command:
 
     ```bash
-    python hangman.py
+    python hangman_with_file.py
     ```
 
-3.  **Play the game:** Follow the prompts to guess the letters and try to figure out the hidden word.
+4.  **Play the game:** Follow the prompts to guess the letters and try to figure out the hidden word.
 
 ## Game Instructions
 
@@ -35,40 +39,7 @@ This Python script implements a classic Hangman game. Players try to guess a hid
 5.  Try to guess the word before the Hangman figure is fully drawn (6 incorrect guesses).
 6.  If you guess the word correctly, you win! If the Hangman figure is completed, you lose.
 
-## Code Structure
+## File Structure
 
--   `hangman.py`: Contains the Hangman game implementation.
-    -   `word_list`: A list of words used in the game.
-    -   `hangman_stages`: A list of strings representing the different stages of the Hangman figure.
-    -   `choose_word()`: Randomly selects a word from the `word_list`.
-    -   `display_word(word, guessed_letters)`: Displays the word with correctly guessed letters and underscores.
-    -   `hangman()`: The main function that runs the Hangman game.
-
-## Example Gameplay
-
-```bash
-🎯 Welcome to Hangman! 🎯
-Guess the word, one letter at a time.
------
-|   |
-    |
-    |
-    |
-    |
---------
-Word: _ _ _ _ _ _ _
-Incorrect guesses (0/6):
-Enter a letter: e
-✅ Correct!
------
-|   |
-    |
-    |
-    |
-    |
---------
-Word: _ e _ _ _ _ _
-Incorrect guesses (0/6):
-Enter a letter: a
-✅ Correct!
-... (Continue guessing)
+-   `hangman_with_file.py`: Contains the Hangman game implementation.
+-   `words.txt`: Contains the list of words to be used in the game (one word per line).
